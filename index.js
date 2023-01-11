@@ -1,14 +1,17 @@
 import { createClient } from 'redis';
+import consola from 'consola';
+import {  red, cyan  } from 'kolorist';
 
 console.clear()
-console.log('-------------- Mog NodeJS Microservice DEMO --------------')
-console.log('------------------ Server is Running ---------------------')
+consola.info('Starting NodeJS Microservice ')
+consola.info('Service is running')
 
 const client = createClient()
 const subscriber = client.duplicate();
 await subscriber.connect();
 const publisher = client.duplicate();
 await publisher.connect();
+consola.success('connected to redis client')
 
 /**
  * isEmitter 判断是否为 event-based 模式

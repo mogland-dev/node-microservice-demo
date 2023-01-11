@@ -12,5 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "redis": "^4.5.1"
+  },
+  "devDependencies": {
+    "consola": "^2.15.3",
+    "kolorist": "^1.6.0"
   }
 }
